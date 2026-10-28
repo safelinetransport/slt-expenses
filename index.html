@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Expense Reimbursement – Safeline Transport</title>
+<meta name="theme-color" content="#0b1220">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #0b1220; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; height: 100dvh; border: 0; display: block; }
+</style>
+</head>
+<body>
+<!-- Opens the expense app from outside Google, so phones signed into several Google accounts still load it. -->
+<iframe id="app" title="Expense Reimbursement" allow="camera; clipboard-write"></iframe>
+<script>
+  var APP = 'https://script.google.com/macros/s/AKfycbwJtD6fEFONJv4KE7WhPjJmxfAi6mZyxPEzAGA8cyOXVk5J2ODHDnELpn7ayJ8EUlfS/exec';
+  document.getElementById('app').src = APP + (location.search || '');
+</script>
+</body>
+</html>
